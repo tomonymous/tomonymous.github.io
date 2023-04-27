@@ -114,6 +114,7 @@ span.navbar-text {
 .navbar-text button {
   font-weight: 700;
   color: #fff;
+  border-radius: 10px;
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
@@ -128,9 +129,10 @@ span.navbar-text {
 .navbar-text button::before {
   content: "";
   width: 0%;
+  border-radius: 10px;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: #ffffff;
   left: 0;
   top: 0;
   z-index: -1;
@@ -194,9 +196,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
+  background-color: #000;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
-  background-position: top center;
+  background-image: url('./assets/img/banner-bg.jpg');
+  background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -315,8 +318,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .projects {
   padding: 80px 0;
   position: relative;
+  background-image: url('./assets/img/projects-bg.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: black;
+  transition: 0.3s ease-in-out;
 }
+
+.preAnimated {
+  visibility: hidden;
+}
+
 .projects h2 {
 	font-size: 45px;
 	font-weight: 700;
@@ -332,10 +345,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .projects .nav.nav-pills {
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: #100c25;
   overflow: hidden;
 }
 .projects .nav.nav-pills .nav-item {
@@ -347,7 +360,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 13px 0px;
   color: #fff;
   width: 100%;
-  font-size: 1.4cqw;
+  font-size: 2.5vmin;
   letter-spacing: 0.8px;
   font-weight: 600;
   position: relative;
@@ -363,7 +376,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(135deg, #f47514 -40%, #100c25 60%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -392,12 +405,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
+
+.carousel-img {
+  width: 90vmin;
+  border-radius: 30px;
+  transition: 0.6s ease-in-out;
+}
+
+.carousel-caption {
+  font-size: 1vmin;
+  color:rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.carousel-item:hover .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  color:rgba(255, 255, 255, 1);
+  opacity: 1;
+}
+
+.carousel-item:hover .carousel-img {
+  filter: brightness(70%);
+}
+
+.project-video {
+  border-radius: 30px;
+}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
 }
+
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -453,7 +495,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(135deg, #f47514 -40%, #191239 50%);
   padding: 60px 0 200px 0;
 }
 .contact img {
