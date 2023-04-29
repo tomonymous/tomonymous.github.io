@@ -73,7 +73,7 @@ export const Skills = () => {
                                 <p className={isVisible ? "animate__animated animate__flipInX": "preAnimated"}>What I've been working with.</p>
                             </div>}
                         </TrackVisibility>
-                        <Carousel responsive={responsive} autoPlay autoPlaySpeed={2000} infinite={true}  className="owl-carousel owl-theme skill-slider">
+                        <Carousel responsive={responsive} partialVisible autoPlay autoPlaySpeed={2000} infinite={true}  className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={javaScriptImg} alt="Image" />
                                 <h5>JavaScript</h5>

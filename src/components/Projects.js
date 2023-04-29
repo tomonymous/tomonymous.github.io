@@ -1,46 +1,42 @@
 import { Container, Row, Col, Tab, Nav, Carousel, Ratio } from "react-bootstrap";
+import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import tracklistImg1 from "../assets/img/tracklist-1.jpg";
+import tracklistImg2 from "../assets/img/tracklist-2.jpg";
+import tracklistImg3 from "../assets/img/tracklist-3.jpg";
+import tracklistImg4 from "../assets/img/tracklist-4.jpg";
 import water1 from "../assets/img/project-ob1-1.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import { ArrowRightCircle } from "react-bootstrap-icons";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "A Match-3 Puzzle Game",
+      description: "Coded with Unity in C#",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "An Explosive Twist",
+      description: "Use weapons and powerups to generate the highest value stones you can within a set number of moves.",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Unlocks and Customisation",
+      description: "Earn keys to unlock new Power Ups and new skins for the stones.",
       imgUrl: projImg3,
     },
   ];
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+  const [hovered, setHovered] = useState(false);
+  const toggleHover = () => setHovered(!hovered);
   
   return (
     <section className="projects" id="projects">
@@ -51,49 +47,60 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div>
                 <h2 className={isVisible ? "animate__animated animate__flipInX": "preAnimated"}>Projects</h2>
-                <p className={isVisible ? "animate__animated animate__flipInX": "preAnimated"}>What I've been working on.</p>
+                <p className={isVisible ? "animate__animated animate__flipInX": "preAnimated"}>Four coding projects that I've been working on.</p>
               </div>}
             </TrackVisibility>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">The Album Quiz</Nav.Link>
+                    <Nav.Link eventKey="first">one</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Stone&shy;Forge</Nav.Link>
+                    <Nav.Link eventKey="second">two</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">The Auto Dog Bowl</Nav.Link>
+                    <Nav.Link eventKey="third">three</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="fourth">Recipe Frog</Nav.Link>
+                    <Nav.Link eventKey="fourth">four</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content id="slideInUp">
                   <Tab.Pane eventKey="first">
                     <Row>
                       <Col size={12}>
+                        <button 
+                          role="link"
+                          onClick={() => openInNewTab("https://www.tracklistchallenge.com")}
+                          onMouseEnter={toggleHover}
+                          onAnimationEnd={toggleHover}>
+                            The Tracklist Challenge | Try it!
+                            <ArrowRightCircle 
+                              className={hovered ? "animate__animated animate__zoomOutRight" : ""} 
+                              size={25} 
+                            />
+                        </button>
                         <Carousel wrap="true" interval={null}>
                           <Carousel.Item className="carousel-item">
-                            <img className="carousel-img" src="https://live.staticflickr.com/65535/52848308378_f850a51f52_c_d.jpg"></img>
+                            <img className="carousel-img" src={tracklistImg1}></img>
                             <Carousel.Caption className="carousel-caption">
                               <p>A website that can create a quiz out of any album using the muscbrainz.org database.</p>
                             </Carousel.Caption>
                           </Carousel.Item>
                           <Carousel.Item className="carousel-item">
-                            <img className="carousel-img" src="https://live.staticflickr.com/65535/52848041609_1d6074998b_o_d.jpg"></img>
+                            <img className="carousel-img" src={tracklistImg2}></img>
                             <Carousel.Caption className="carousel-caption">
                               <p>Coded with the Django Python Web-framework, JavaScript, HTML and CSS.</p>
                             </Carousel.Caption>
                           </Carousel.Item>
                           <Carousel.Item className="carousel-item">
-                            <img className="carousel-img" src="https://live.staticflickr.com/65535/52847852166_c5728b4949_o_d.jpg"></img>
+                            <img className="carousel-img" src={tracklistImg3}></img>
                             <Carousel.Caption className="carousel-caption">
                               <p>Accesses the MusicBrainz database using the musicbrainzngs Python package.</p>
                             </Carousel.Caption>
                           </Carousel.Item>
                           <Carousel.Item className="carousel-item">
-                            <img className="carousel-img" src="https://live.staticflickr.com/65535/52848248355_259e8a4d77_k_d.jpg"></img>
+                            <img className="carousel-img" src={tracklistImg4}></img>
                             <Carousel.Caption className="carousel-caption">
                             <p>Users are challenged to list as many tracks that they can within a set amount of time.</p>
                             </Carousel.Caption>
@@ -122,6 +129,17 @@ export const Projects = () => {
                     <p>A chatty, over-engineered, Raspberry Pi powered,  internet enabled robot designed to… keep my dog’s water bowl topped up.</p>
                   </Tab.Pane>
                   <Tab.Pane eventKey="fourth">
+                      <button 
+                        role="link"
+                        onClick={() => openInNewTab("https://play.google.com/store/apps/details?id=com.DeerlightGames.ComboMatch")}
+                        onMouseEnter={toggleHover}
+                        onAnimationEnd={toggleHover}>
+                          StoneForge | Try it!
+                          <ArrowRightCircle 
+                            className={hovered ? "animate__animated animate__zoomOutRight" : ""} 
+                            size={25} 
+                        />
+                      </button>
                     <Row>
                       <div class="col-1"></div>
                       <div class="col-10">

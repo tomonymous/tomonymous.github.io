@@ -214,7 +214,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 .banner h1 {
-  font-size: 5vw;
+  font-size: 5vmax;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -314,6 +314,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.item h5 {
+  font-size:medium;
+}
+
 /************ Projects Css ************/
 .projects {
   padding: 80px 0;
@@ -335,6 +339,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
   text-align: center;
 }
+.projects button {
+  color: #ffffff;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 20px 0px;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  display: inline;
+  align-items: center;
+}
+.projects button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  line-height: 1;
+}
 .projects p {
   color: #B8B8B8;
   font-size: 18px;
@@ -348,7 +368,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 95%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: #100c25;
+  background-color: #26242c;
   overflow: hidden;
 }
 .projects .nav.nav-pills .nav-item {
@@ -406,6 +426,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0 55px 55px 0;
 }
 
+.proj-heading {
+  display: inline;
+}
 .carousel-img {
   width: 90vmin;
   border-radius: 30px;
@@ -413,6 +436,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .carousel-caption {
+  width: 100%;
+  right: 0 !important; 
+  left: 0 !important; 
+  position: absolute !important;
   font-size: 1vmin;
   color:rgba(255, 255, 255, 0);
   opacity: 0;
@@ -442,7 +469,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #f47514 -50.91%, #160950 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
@@ -490,7 +517,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project-image {
   width: 50%;
   padding: 10px 0 10px 0;
-  border-radius: 50px;
+  border-radius:10%;
 }
 
 /************ Contact Css ************/
