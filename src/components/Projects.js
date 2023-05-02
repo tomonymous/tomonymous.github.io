@@ -1,5 +1,6 @@
 import { Container, Row, Col, Tab, Nav, Carousel, Ratio } from "react-bootstrap";
 import { useState } from "react";
+import { motion } from "framer-motion"
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
@@ -8,6 +9,8 @@ import tracklistImg1 from "../assets/img/tracklist-1.jpg";
 import tracklistImg2 from "../assets/img/tracklist-2.jpg";
 import tracklistImg3 from "../assets/img/tracklist-3.jpg";
 import tracklistImg4 from "../assets/img/tracklist-4.jpg";
+import recipeImg1 from "../assets/img/recipe-1.jpg"
+import recipeImg2 from "../assets/img/recipe-2.jpg"
 import water1 from "../assets/img/project-ob1-1.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
@@ -110,6 +113,17 @@ export const Projects = () => {
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
+                   <button 
+                      role="link"
+                      onClick={() => openInNewTab("https://play.google.com/store/apps/details?id=com.DeerlightGames.ComboMatch")}
+                      onMouseEnter={toggleHover}
+                      onAnimationEnd={toggleHover}>
+                        StoneForge | Try it!
+                        <ArrowRightCircle 
+                          className={hovered ? "animate__animated animate__zoomOutRight" : ""} 
+                          size={25} 
+                      />
+                    </button>
                     <Row>
                       {
                         projects.map((project, index) => {
@@ -122,24 +136,6 @@ export const Projects = () => {
                         })
                       }
                     </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="third">
-                    <h3>Kurumi's Water Assistant</h3>
-                    <img className="project-image" src={water1}></img>
-                    <p>A chatty, over-engineered, Raspberry Pi powered,  internet enabled robot designed to… keep my dog’s water bowl topped up.</p>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="fourth">
-                      <button 
-                        role="link"
-                        onClick={() => openInNewTab("https://play.google.com/store/apps/details?id=com.DeerlightGames.ComboMatch")}
-                        onMouseEnter={toggleHover}
-                        onAnimationEnd={toggleHover}>
-                          StoneForge | Try it!
-                          <ArrowRightCircle 
-                            className={hovered ? "animate__animated animate__zoomOutRight" : ""} 
-                            size={25} 
-                        />
-                      </button>
                     <Row>
                       <div class="col-1"></div>
                       <div class="col-10">
@@ -148,6 +144,40 @@ export const Projects = () => {
                         </Ratio>
                       </div>
                       <div class="col-1"></div>
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="third">
+                    <h3>Kurumi's Water Assistant</h3>
+                    <img className="project-image" src={water1}></img>
+                    <p>A chatty, over-engineered, Raspberry Pi powered,  internet enabled robot designed to… keep my dog’s water bowl topped up.</p>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="fourth">
+                    <button 
+                      role="link"
+                      onClick={() => openInNewTab("https://recipefrog.applikuapp.com/")}
+                      onMouseEnter={toggleHover}
+                      onAnimationEnd={toggleHover}>
+                        Recipe Frog | Try it!
+                        <ArrowRightCircle 
+                          className={hovered ? "animate__animated animate__zoomOutRight" : ""} 
+                          size={25} 
+                        />
+                    </button>
+                    <Row>
+                      <Col size={12} sm={12} md={12}>
+                        <motion.img 
+                          whileHover={{scale: 1.02}}
+                          className="project-image" 
+                          src={recipeImg1}>
+                        </motion.img>
+                      </Col>
+                      <Col size={12} sm={12} md={12}>
+                        <motion.img 
+                          whileHover={{scale: 1.02}}
+                          className="project-image" 
+                          src={recipeImg2}>
+                        </motion.img>
+                      </Col>
                     </Row>
                   </Tab.Pane>
                 </Tab.Content>

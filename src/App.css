@@ -58,6 +58,11 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 15%;
 }
+
+.navbar-logo {
+  height: 10vmin;
+}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -320,7 +325,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .projects {
-  padding: 80px 0;
+  padding: 40px 0;
   position: relative;
   background-image: url('./assets/img/projects-bg.jpg');
   background-position: top center;
@@ -662,7 +667,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 18px;
 }
 .footer img {
-  width: 26%;
+  width: 16%;
 }
 .footer p {
   font-weight: 400;
@@ -678,7 +683,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmax;
   pointer-events: none;
 }
 
