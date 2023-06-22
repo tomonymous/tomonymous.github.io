@@ -7,6 +7,7 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Photography } from './components/Photography';
+import { Videography } from './components/Videography';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Projects />
       <Skills />
       <Photography />
+      <Videography />
       <Contact />
       <Footer />
     </div>

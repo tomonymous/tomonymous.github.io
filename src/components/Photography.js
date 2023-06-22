@@ -40,7 +40,7 @@ export const Photography = () => {
                 </TrackVisibility>
                 <Col>
                     <div style={containerStyle}>
-                    <Gallery photos={photos} onClick={openLightbox} direction="column" columns={4}/>
+                    <Gallery photos={photos} onClick={openLightbox} direction="column" columns={3}/>
                     <ModalGateway>
                         {viewerIsOpen ? (
                         <Modal onClose={closeLightbox}>
