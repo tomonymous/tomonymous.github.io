@@ -8,25 +8,35 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import ReactPlayer from "react-player";
 import "swiper/css/navigation";
-
+import thumbnail1 from "../assets/img/videoThumbs/DeerlightAnneke.avif"
+import thumbnail2 from "../assets/img/videoThumbs/Cafelat.jpg"
+import thumbnail3 from "../assets/img/videoThumbs/Seoul.jpg"
+import thumbnail4 from "../assets/img/videoThumbs/Negatives.jpg"
+import thumbnail5 from "../assets/img/videoThumbs/DeerlightMel.avif"
+import thumbnail6 from "../assets/img/videoThumbs/Waiatarua.jpg"
+import thumbnail7 from "../assets/img/videoThumbs/DeerlightRenisa.avif"
+import thumbnail8 from "../assets/img/videoThumbs/Stoneforge.webp"
+import thumbnail9 from "../assets/img/videoThumbs/Sunny.jpg"
+import thumbnail10 from "../assets/img/videoThumbs/CottonRepublic.jpg"
+import thumbnail11 from "../assets/img/videoThumbs/DeerlightCalista.avif"
 // import required modules
 
 export const Videography = () => {
   const [swiper, setSwiper] = useState(null);
-  const [slideHeight, setSlideHeight] = useState(35);
+  const [slideHeight, setSlideHeight] = useState(25);
 
   useEffect(() => {
     function handleResize() {
       const screenWidth = window.innerWidth;
       let height = 50;
       if(screenWidth < 500){
-        height = 35;
+        height = 25;
       }
       else if(screenWidth > 1536){
         height = 75;
       }
       else{
-        height = (screenWidth-500)/26+35;
+        height = (screenWidth-393)/23+25;
       }
       setSlideHeight(height);
     }
@@ -46,62 +56,76 @@ export const Videography = () => {
     {
       url: "https://player.vimeo.com/video/337720564",
       aspectRatio: 16 / 9,
+      thumbnail: thumbnail1,
     },
     {
       url: "https://www.youtube.com/watch?v=4TUp05al-1A",
       aspectRatio: 16 / 9,
+      thumbnail: thumbnail2,
     },
     {
       url: "https://www.youtube.com/shorts/4ncy2oZL7j8",
       aspectRatio: 9 / 16,
+      thumbnail: thumbnail3,
     },
     {
         url: "https://www.youtube.com/shorts/YEzFych7g6g",
         aspectRatio: 9 / 16,
+        thumbnail: thumbnail4,
     },
     {
         url: "https://vimeo.com/329708414",
         aspectRatio: 16 / 9,
+        thumbnail: thumbnail5,
       },
     {
       url: "https://www.youtube.com/watch?v=KUg5eq2FBJA",
       aspectRatio: 16 / 9,
+      thumbnail: thumbnail6,
     },
     {
         url: "https://vimeo.com/420136896",
         aspectRatio: 16 / 9,
+        thumbnail: thumbnail7,
       },
     {
         url: "https://www.youtube.com/watch?v=Q1t-XZS7LME",
         aspectRatio: 16 / 9,
+        thumbnail: thumbnail8,
     },
     {
         url: "https://www.youtube.com/shorts/cC74no0cLTg",
         aspectRatio: 9 / 16,
+        thumbnail: thumbnail9,
     },
     {
-        url: "https://vimeo.com/208741994",
+        url: "https://vimeo.com/839173444",
         aspectRatio: 9 / 16,
+        thumbnail: thumbnail10,
     },
     {
         url: "https://vimeo.com/286271770",
         aspectRatio: 16 / 9,
+        thumbnail: thumbnail11,
     },
   ];
 
-  const VideoSlide = ({ url, aspectRatio }) => (
-    <div
+  const VideoSlide = ({ url, aspectRatio, thumbnail }) => (
+    <div className='player-wrapper'
       style={{
         width: `${slideHeight * aspectRatio}vh`,
         height: `${slideHeight}vh`,
         position: "relative",
+        paddingTop: '56.5%',
       }}
     >
       <ReactPlayer
         url={url}
-        controls
         width="100%"
         height="100%"
+        light={<img src={thumbnail}/>}
+        controls="true"
+        className='react-player'
         style={{ position: "absolute", top: 0, left: 0 }}
       />
     </div>
@@ -139,6 +163,8 @@ export const Videography = () => {
             onSwiper={setSwiper}
             onSlideChange={handleSlideChange}
             slidesPerView={"auto"}
+            grabCursor={false}
+            watchSlidesProgress={true}
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
@@ -150,11 +176,11 @@ export const Videography = () => {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="mySwiper"
+            //className="mySwiper"
           >
-            {videoList.map(({ url, aspectRatio }, index) => (
+            {videoList.map(({ url, aspectRatio, thumbnail }, index) => (
               <SwiperSlide key={index}>
-                <VideoSlide url={url} aspectRatio={aspectRatio} />
+                <VideoSlide url={url} aspectRatio={aspectRatio} thumbnail={thumbnail} />
               </SwiperSlide>
             ))}
           </Swiper>
