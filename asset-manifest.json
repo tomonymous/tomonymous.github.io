@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dbd9fb95.css",
-    "main.js": "/static/js/main.998808aa.js",
+    "main.js": "/static/js/main.f3febcb0.js",
     "static/js/787.e4292e26.chunk.js": "/static/js/787.e4292e26.chunk.js",
     "static/media/color-sharp.png": "/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
@@ -12,6 +12,7 @@
     "static/media/photo-20.jpg": "/static/media/photo-20.2eb8b3bd431f1eb8ecb0.jpg",
     "static/media/photo-8.jpg": "/static/media/photo-8.e000a20864db93f8d69d.jpg",
     "static/media/photo-3.jpg": "/static/media/photo-3.8363731a270b58b2d022.jpg",
+    "static/media/Seoul.jpg": "/static/media/Seoul.9f2a0fed7926c40e1f65.jpg",
     "static/media/photo-17.jpg": "/static/media/photo-17.996b0df93c39bb9ead4c.jpg",
     "static/media/photo-22.jpg": "/static/media/photo-22.1ab6a0a39e9c96f2ae50.jpg",
     "static/media/photo-7.jpg": "/static/media/photo-7.42defa48af2ee50e28af.jpg",
@@ -43,13 +44,22 @@
     "static/media/project-img3.png": "/static/media/project-img3.894e48d7506a4aaed7bf.png",
     "static/media/contact-img.png": "/static/media/contact-img.59d1cf5ca4d6a7a8dbe2.png",
     "static/media/project-img2.png": "/static/media/project-img2.06d2efa5f0dab32809a9.png",
+    "static/media/CottonRepublic.jpg": "/static/media/CottonRepublic.514f4d3446aff79d6141.jpg",
+    "static/media/Sunny.jpg": "/static/media/Sunny.db9b364215d8661ec50b.jpg",
+    "static/media/Negatives.jpg": "/static/media/Negatives.e40a36272103ef57598f.jpg",
+    "static/media/Waiatarua.jpg": "/static/media/Waiatarua.167721656bde480352cc.jpg",
     "static/media/tracklist-2.jpg": "/static/media/tracklist-2.4d0a510799237f38de75.jpg",
+    "static/media/Cafelat.jpg": "/static/media/Cafelat.aca8c256d467750b97cc.jpg",
     "static/media/python.png": "/static/media/python.82efb64f8698a267f8bf.png",
+    "static/media/DeerlightRenisa.avif": "/static/media/DeerlightRenisa.56bf20462bcaaf763092.avif",
     "static/media/recipe-2.jpg": "/static/media/recipe-2.e9534f35049fb1de2a91.jpg",
     "static/media/unity.png": "/static/media/unity.b196c776e313b0a0c14f.png",
     "static/media/tracklist-4.jpg": "/static/media/tracklist-4.6e49052c1bb993fc6f00.jpg",
     "static/media/davinci.png": "/static/media/davinci.304cae19022281e80de4.png",
+    "static/media/DeerlightAnneke.avif": "/static/media/DeerlightAnneke.ffcfd43a60aabb56c346.avif",
     "static/media/github.png": "/static/media/github.2e626638428e7746c60c.png",
+    "static/media/Stoneforge.webp": "/static/media/Stoneforge.7b5d9e728eb625aafd4e.webp",
+    "static/media/DeerlightMel.avif": "/static/media/DeerlightMel.162f4412c0b702cd8a29.avif",
     "static/media/recipe-1.jpg": "/static/media/recipe-1.20160d493035d6575c18.jpg",
     "static/media/tracklist-3.jpg": "/static/media/tracklist-3.ee79c9c2a7d83a6ed5c7.jpg",
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
@@ -62,6 +72,7 @@
     "static/media/lua.png": "/static/media/lua.fdfaad28e8b6768cf2d2.png",
     "static/media/tracklist-1.jpg": "/static/media/tracklist-1.be19175907e71b75ba8d.jpg",
     "static/media/c-sharp.png": "/static/media/c-sharp.059e5b38e56cdf65af48.png",
+    "static/media/DeerlightCalista.avif": "/static/media/DeerlightCalista.fd873023668dd414fc72.avif",
     "static/media/javascript.png": "/static/media/javascript.b4015cc4df20810c5258.png",
     "static/media/afterEffects.png": "/static/media/afterEffects.60363a79a6d6cd3e523a.png",
     "static/media/html.png": "/static/media/html.dd17f48e1872841cd2dd.png",
@@ -79,11 +90,11 @@
     "static/media/arrow2.svg": "/static/media/arrow2.3d9522b6fd8f2464b7200ebf2c1bb09a.svg",
     "static/media/arrow1.svg": "/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "main.dbd9fb95.css.map": "/static/css/main.dbd9fb95.css.map",
-    "main.998808aa.js.map": "/static/js/main.998808aa.js.map",
+    "main.f3febcb0.js.map": "/static/js/main.f3febcb0.js.map",
     "787.e4292e26.chunk.js.map": "/static/js/787.e4292e26.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dbd9fb95.css",
-    "static/js/main.998808aa.js"
+    "static/js/main.f3febcb0.js"
   ]
 }
